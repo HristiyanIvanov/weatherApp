@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import { AiOutlineAppstore } from "react-icons/ai";
+// import { AiOutlineAppstore } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import SearchBar from "./SearchBar";
 import DarkModeToggle from "./DarkModeToggle";
