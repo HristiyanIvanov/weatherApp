@@ -15,10 +15,6 @@ const Card = styled.div`
   max-width: 250px;
   margin-right: 10px;
 
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
-
   p {
     font-size: 14px;
     font-weight: 400;
@@ -36,6 +32,8 @@ const MainOfCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+  width: 100%;
+  max-width: 250px;
   align-items: center;
   justify-content: center;
   padding: 0 0 5px 10px;
@@ -51,6 +49,7 @@ const TopOfCard = styled.div`
   align-items: center;
   padding: 15px 20px 10px 20px;
   width: 100%;
+  max-width: 250px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: var(--color-blue-700);

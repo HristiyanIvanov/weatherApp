@@ -11,7 +11,6 @@ const WeatherCardStyles = styled.div`
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  /* width: 13%; */
   width: 100%;
   max-width: 150px;
   border-radius: 25px;

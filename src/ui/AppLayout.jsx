@@ -50,6 +50,19 @@ const WeatherCardContainer = styled.div`
   display: flex;
   overflow-x: auto;
   padding: 1rem 0;
+  max-width: 100%;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+
+  @media (max-width: 720px) {
+    width: 70%;
+  }
+
+  @media (max-width: 600px) {
+    width: 60%;
+  }
 
   &::-webkit-scrollbar {
     background-color: var(--color-grey-200);

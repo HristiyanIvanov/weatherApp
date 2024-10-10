@@ -3,6 +3,7 @@ import { useWeather } from "../context/WeatherContext";
 import getHourlyWeatherStartingFromNow from "../helpers/getHourlyWeatherStartingFromNow";
 import { addDays, startOfDay } from "date-fns";
 import Spinner from "../ui/Spinner";
+
 function TodayTomorrowForecast({ forecastDay }) {
   const { weatherData } = useWeather();
   return (
