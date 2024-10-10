@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// WeatherCard.js
 import styled, { useTheme } from "styled-components";
 import IconComponent from "../components/IconComponent";
 import getDayFromDate from "../helpers/dateGetter";
@@ -12,7 +11,9 @@ const WeatherCardStyles = styled.div`
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 13%;
+  /* width: 13%; */
+  width: 100%;
+  max-width: 150px;
   border-radius: 25px;
   background-color: var(--color-grey-100);
   color: var(--color-grey-900);
@@ -31,6 +32,19 @@ const WeatherCardStyles = styled.div`
   h3 {
     margin-top: 0;
     line-height: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 150px;
+    padding: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 120px;
+    padding: 0.5rem;
+    h3 {
+      font-size: 0.9rem;
+    }
   }
 `;
 

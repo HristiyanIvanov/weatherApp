@@ -31,7 +31,7 @@ const OverviewLayout = styled.div`
 const MainOverviewLayout = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
   justify-content: space-between;
 
   @media (max-width: 1000px) {

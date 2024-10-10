@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const OverviewCardStyles = styled.div`
-  width: 270px;
+  width: 100%;
+  max-width: 270px;
   border-radius: 25px;
   background-color: var(--color-grey-100);
   color: var(--color-grey-900);
