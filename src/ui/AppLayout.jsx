@@ -52,16 +52,32 @@ const WeatherCardContainer = styled.div`
   padding: 1rem 0;
   max-width: 100%;
 
-  @media (max-width: 1000px) {
+  ${({ isRoot }) =>
+    isRoot &&
+    `
+    @media (max-width: 1000px) {
+      width: 80%;
+    }
+
+    @media (max-width: 880px) {
+      width: 70%;
+    }
+
+    @media (max-width: 775px) {
+      width: 60%;
+    }
+
+    @media (max-width: 650px) {
+      width: 50%;
+    }
+
+    @media (max-width: 560px) {
+      max-width: 40%;
+    }
+  `}
+
+  @media (max-width: 550px) {
     width: 90%;
-  }
-
-  @media (max-width: 720px) {
-    width: 70%;
-  }
-
-  @media (max-width: 600px) {
-    width: 60%;
   }
 
   &::-webkit-scrollbar {
@@ -134,6 +150,7 @@ function AppLayout() {
             <WeatherCardContainer
               ref={scrollContainerRef}
               onWheel={handleScroll}
+              isRoot={pathname !== "/"}
             >
               <Routes>
                 <Route
