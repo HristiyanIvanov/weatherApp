@@ -14,6 +14,18 @@ const OverviewLayout = styled.div`
     font-size: 24px;
     color: var(--color-grey-900);
   }
+
+  @media (max-width: 1000px) {
+    width: 75%;
+  }
+
+  @media (max-width: 800px) {
+    gap: 10px;
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `;
 
 const MainOverviewLayout = styled.div`
@@ -21,6 +33,15 @@ const MainOverviewLayout = styled.div`
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+    justify-content: start;
+  }
+  @media (max-width: 800px) {
+    gap: 10px;
+    justify-content: start;
+  }
 `;
 
 const OtherCitiesStyle = styled.div`

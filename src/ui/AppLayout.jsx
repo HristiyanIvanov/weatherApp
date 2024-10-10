@@ -14,39 +14,64 @@ const Container = styled.div`
   background-color: var(--color-grey-50);
   width: 90%;
   max-width: 1400px;
-  padding: 30px;
-  margin: 50px auto;
+  padding: 2rem;
+  margin: 2rem auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2rem;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 const Main = styled.main.withConfig({
   shouldForwardProp: (prop) => prop !== "isSingleColumn",
 })`
   display: grid;
-  grid-template-columns: ${(props) =>
-    props.isSingleColumn ? "1fr" : "2fr 1fr"};
-  gap: 30px;
+  gap: 2rem;
 
-  @media (max-width: 1000px) {
+  /* Define grid layout based on screen size */
+  grid-template-columns: ${(props) =>
+    props.isSingleColumn ? "1fr" : "minmax(0, 2fr) minmax(0, 1fr)"};
+
+  @media (min-width: 1100px) {
+    /* Grid layout for large screens */
+    grid-template-columns: ${(props) =>
+      props.isSingleColumn ? "1fr" : "2fr 1fr"};
+  }
+
+  @media (max-width: 1000) {
     grid-template-columns: 1fr;
   }
 `;
+
+// const Main = styled.main.withConfig({
+//   shouldForwardProp: (prop) => prop !== "isSingleColumn",
+// })`
+//   display: grid;
+//   grid-template-columns: ${(props) =>
+//     props.isSingleColumn ? "1fr" : "minmax(0, 2fr) minmax(0, 1fr)"};
+//   gap: 2rem;
+
+//   @media (max-width: 800px) {
+//     grid-template-columns: 1fr;
+//   }
+// `;
+
 const WeatherCardContainer = styled.div`
   display: flex;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 1rem 0;
 
   &::-webkit-scrollbar {
     background-color: var(--color-grey-200);
-    border-radius: 10px;
+    height: 8px;
   }
   &::-webkit-scrollbar-track {
     background: var(--color-grey-200);
-    border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -62,6 +87,34 @@ const WeatherCardContainer = styled.div`
 const MainWeatherLayout = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
+
+  @media (max-width: 815px) {
+    width: 70%;
+  }
+  @media (max-width: 720px) {
+    width: 60%;
+  }
+
+  @media (max-width: 600px) {
+    width: 50%;
+  }
+  @media (max-width: 520px) {
+    width: 45%;
+  }
+
+  @media (max-width: 450px) {
+    width: 40%;
+  }
+
+  @media (max-width: 400px) {
+    width: 35%;
+  }
 `;
 
 function AppLayout() {

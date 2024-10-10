@@ -15,6 +15,17 @@ const CityCardStyles = styled.button`
   border: none;
   cursor: pointer;
 
+  @media (max-width: 1000px) {
+    width: 75%;
+  }
+
+  @media (max-width: 800px) {
+    width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 30%;
+  }
   &:hover {
     background-color: var(--color-grey-200);
     transition: 0.3s;

@@ -11,9 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { useDarkMode } from "../context/DarkModeContext";
-import Spinner from "../ui/Spinner";
 import getShortDayNames from "../helpers/getShortDayNames";
-import { tr } from "date-fns/locale";
 
 ChartJS.register(
   CategoryScale,
@@ -29,6 +27,9 @@ const ChartStyles = styled.div`
   justify-content: center;
   margin-top: 50px;
   align-items: center;
+  @media (max-width: 1000px) {
+    justify-content: start;
+  }
 `;
 const RainChanceText = styled.h3`
   color: var(--color-grey-900);
