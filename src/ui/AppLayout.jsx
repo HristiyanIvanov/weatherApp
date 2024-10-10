@@ -41,7 +41,7 @@ const Main = styled.main.withConfig({
       props.isSingleColumn ? "1fr" : "2fr 1fr"};
   }
 
-  @media (max-width: 1000) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `;
