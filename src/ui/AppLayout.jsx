@@ -33,12 +33,10 @@ const Main = styled.main.withConfig({
   display: grid;
   gap: 2rem;
 
-  /* Define grid layout based on screen size */
   grid-template-columns: ${(props) =>
     props.isSingleColumn ? "1fr" : "minmax(0, 2fr) minmax(0, 1fr)"};
 
   @media (min-width: 1100px) {
-    /* Grid layout for large screens */
     grid-template-columns: ${(props) =>
       props.isSingleColumn ? "1fr" : "2fr 1fr"};
   }
@@ -47,19 +45,6 @@ const Main = styled.main.withConfig({
     grid-template-columns: 1fr;
   }
 `;
-
-// const Main = styled.main.withConfig({
-//   shouldForwardProp: (prop) => prop !== "isSingleColumn",
-// })`
-//   display: grid;
-//   grid-template-columns: ${(props) =>
-//     props.isSingleColumn ? "1fr" : "minmax(0, 2fr) minmax(0, 1fr)"};
-//   gap: 2rem;
-
-//   @media (max-width: 800px) {
-//     grid-template-columns: 1fr;
-//   }
-// `;
 
 const WeatherCardContainer = styled.div`
   display: flex;
