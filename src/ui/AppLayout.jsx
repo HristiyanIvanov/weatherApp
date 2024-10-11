@@ -38,7 +38,7 @@ const Main = styled.main.withConfig({
 
   @media (min-width: 1100px) {
     grid-template-columns: ${(props) =>
-      props.isSingleColumn ? "1fr" : "2fr 1fr"};
+      props.isSingleColumn ? "1fr" : "3fr 1fr"};
   }
 
   @media (max-width: 1000px) {
@@ -150,7 +150,7 @@ function AppLayout() {
             <WeatherCardContainer
               ref={scrollContainerRef}
               onWheel={handleScroll}
-              isRoot={pathname !== "/"}
+              $isRoot={pathname !== "/"}
             >
               <Routes>
                 <Route
