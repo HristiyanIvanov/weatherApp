@@ -8,7 +8,7 @@ const CityCardStyles = styled.button`
   border-radius: 25px;
   background-color: var(--color-grey-100);
   color: var(--color-grey-900);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   text-align: start;
   padding: 0 20px;
   line-height: 1;
